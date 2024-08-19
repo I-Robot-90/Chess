@@ -31,7 +31,30 @@ public: Board()= default;
             for (int j = 0; j < cols; ++j) {
                 grid[1][j].first = pawn.piece;
                 grid[6][j].first = pawn.piece;
+
+                grid[0][0].first= rook.piece;
+                grid[0][7].first = rook.piece;
+                grid[7][0].first= rook.piece;
+                grid[7][7].first= rook.piece;
+
+                grid[0][3].first = king.piece;
+                grid[7][3].first = king.piece;
+
+                grid[0][4].first = queen.piece;
+                grid[7][4].first = queen.piece;
+
+                grid[0][1].first = knight.piece;
+                grid[0][6].first = knight.piece;
+                grid[7][1].first = knight.piece;
+                grid[7][6].first = knight.piece;
+
+                grid[0][2].first = bishop.piece;
+                grid[0][5].first = bishop.piece;
+                grid[7][2].first = bishop.piece;
+                grid[7][5].first = bishop.piece;
+
                 cout << grid[i][j].first;
+
                 if (j < cols - 1)
                     cout << " |     ";
             }
@@ -51,10 +74,10 @@ int main() {
     pawn.piece = 'p';
 
     bishop.value = 1;
-    bishop.piece = 'b';
+    bishop.piece = 'B';
 
     knight.value = 1;
-    knight.piece = 'h';
+    knight.piece = 'H';
 
     rook.value = 1;
     rook.piece = 'R';
